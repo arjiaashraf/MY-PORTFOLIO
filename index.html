@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arjia Ashraf — CS Student, Full-Stack Developer &amp; AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Arjia Ashraf — Seventh-semester CS student at NUTECH, Full-Stack Developer, and AI Intern." />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://arjiaashraf.github.io/Portfolio/" />
+  <meta property="og:title" content="Arjia Ashraf — Portfolio" />
+  <meta property="og:description" content="Full-Stack Web Apps, AI/ML &amp; Computer Vision Projects, Internships &amp; Certifications." />
+
+  <!-- AA SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23faf7f2' font-family='sans-serif' font-weight='700' font-size='28'%3EAA%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="book-mode">
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo" data-page="hero">AA</a>
+    <ul class="nav__links">
+      <li><a href="#about" data-page="about">About</a></li>
+      <li><a href="#experience" data-page="experience">Experience</a></li>
+      <li><a href="#projects" data-page="projects">Projects</a></li>
+      <li><a href="#skills" data-page="skills">Skills</a></li>
+      <li><a href="#certificates" data-page="certificates">Certificates</a></li>
+      <li><a href="#contact" data-page="contact" class="nav__cta">Contact</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#hero" class="mobile-link" data-page="hero">Home</a></li>
+      <li><a href="#about" class="mobile-link" data-page="about">About</a></li>
+      <li><a href="#experience" class="mobile-link" data-page="experience">Experience</a></li>
+      <li><a href="#projects" class="mobile-link" data-page="projects">Projects</a></li>
+      <li><a href="#skills" class="mobile-link" data-page="skills">Skills</a></li>
+      <li><a href="#certificates" class="mobile-link" data-page="certificates">Certificates</a></li>
+      <li><a href="#contact" class="mobile-link" data-page="contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- BOOK STAGE WRAPPER -->
+  <main class="book-stage" id="bookStage">
+
+    <!-- HERO -->
+    <section class="hero page-section is-active" id="hero">
+      <div class="hero__bg">
+        <svg class="hero__grid" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <defs>
+            <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(15,118,110,0.08)" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        <div class="hero__glow"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__terminal">
+          <div class="terminal__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal__title">arjia@portfolio ~ %</span>
+          </div>
+          <div class="terminal__body">
+            <p class="terminal__line"><span class="terminal__prompt">$ </span><span class="terminal__cmd" id="typedName"></span><span class="terminal__cursor" id="cursor">|</span></p>
+            <p class="terminal__output" id="terminalOutput"></p>
+          </div>
+        </div>
+
+        <h1 class="hero__name" id="heroName">Arjia Ashraf</h1>
+        <p class="hero__tagline">CS Student &bull; Full-Stack Developer &bull; AI Enthusiast</p>
+        <p class="hero__sub">NUTECH &middot; CGPA 3.4 &middot; Rawalpindi, Pakistan</p>
+
+        <div class="hero__actions">
+          <a href="#projects" data-page="projects" class="btn btn--primary">View Projects</a>
+          <a href="C:\Users\PC\Downloads\Portfolio-main\MY CV.pdf" download class="btn btn--outline">Download CV</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arjiaashrafjia@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll">
+        <span>flip page &middot; swipe or arrow keys</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section page-section" id="about">
+      <div class="container">
+        <div class="section__label">01 &mdash; About</div>
+        <h2 class="section__title">Who I Am</h2>
+        <div class="about__grid">
+          <div class="about__text">
+            <p>I'm a dedicated seventh-semester Computer Science student at the <strong>National University of Technology (NUTECH), Islamabad</strong> with a CGPA of 3.4[cite: 1]. Passionate about software development, teamwork, and problem-solving, I bring hands-on project and internship experience in Python, SQL, and full-stack web development[cite: 1].</p>
+            <p>My work spans mobile applications, full-stack platforms, desktop systems, and AI-powered applications — using tools like React, Next.js, TypeScript, Node.js, Express, MySQL, MongoDB, and Figma[cite: 1, 2].</p>
+            <p>I believe in learning by doing — every project and internship has pushed me into new technical challenges and strengthened my engineering workflows[cite: 1, 2].</p>
+          </div>
+          <div class="about__stats">
+            <div class="stat-card">
+              <span class="stat-card__number">3.4</span>
+              <span class="stat-card__label">CGPA / 4.0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__number">7</span>
+              <span class="stat-card__label">Projects Built</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__number">4</span>
+              <span class="stat-card__label">Certifications</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__number">2</span>
+              <span class="stat-card__label">Internships</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="edu__wrap">
+          <h3 class="sub__title">Education</h3>
+          <div class="edu__timeline">
+            <div class="edu__item">
+              <div class="edu__dot"></div>
+              <div class="edu__info">
+                <span class="edu__date">Sep 2023 – Oct 2027</span>
+                <h4>Bachelor in Computer Science</h4>
+                <p>National University of Technology (NUTECH), Islamabad</p>
+                <span class="edu__badge">CGPA: 3.4 / 4.0</span>
+              </div>
+            </div>
+            <div class="edu__item">
+              <div class="edu__dot"></div>
+              <div class="edu__info">
+                <span class="edu__date">Aug 2021 – Aug 2023</span>
+                <h4>FSc Pre-Engineering</h4>
+                <p>APS Humayun College (Federal Board)</p>
+                <span class="edu__badge">923 / 1100</span>
+              </div>
+            </div>
+            <div class="edu__item">
+              <div class="edu__dot"></div>
+              <div class="edu__info">
+                <span class="edu__date">Oct 2020 – Oct 2021</span>
+                <h4>Matriculation (Science)</h4>
+                <p>Federal Board</p>
+                <span class="edu__badge">963 / 1100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section--alt page-section" id="experience">
+      <div class="container">
+        <div class="section__label">02 &mdash; Experience</div>
+        <h2 class="section__title">Work Experience</h2>
+        <div class="exp__list">
+
+          <div class="exp__card">
+            <div class="exp__header">
+              <div>
+                <h3 class="exp__role">AI Intern</h3>
+                <p class="exp__org">Lynux Information Security, MCS</p>
+              </div>
+              <div class="exp__date-badge">Aug 3, 2026 – Sep 10, 2026</div>
+            </div>
+            <ul class="exp__bullets">
+              <li>Worked on Artificial Intelligence, Deep Learning, data training, and Computer Vision tasks in a practical internship setting[cite: 1].</li>
+              <li>Built hands-on workflows across data preparation, model training, evaluation, and computer vision pipelines[cite: 1].</li>
+            </ul>
+            <div class="exp__footer">
+              <div class="exp__tags">
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Data Training</span>
+              </div>
+              <button type="button" class="btn btn--sm btn--outline preview-trigger" data-title="Internship Certificate — Lynux Information Security, MCS" data-img="images/ai internship.jpeg">
+                View Internship Certificate
+              </button>
+            </div>
+          </div>
+
+          <div class="exp__card">
+            <div class="exp__header">
+              <div>
+                <h3 class="exp__role">Intern</h3>
+                <p class="exp__org">Inter Service Public Relations (ISPR) — Summer Internship Program 2025</p>
+              </div>
+              <div class="exp__date-badge">Jul 14 – Aug 22, 2025</div>
+            </div>
+            <ul class="exp__bullets">
+              <li>Participated in the ISPR Summer Internship Program 2025 with practical institutional exposure[cite: 1].</li>
+              <li>Strengthened communication, structured problem-solving, and teamwork within a disciplined environment[cite: 1].</li>
+            </ul>
+            <div class="exp__footer">
+              <div class="exp__tags">
+                <span class="tag">Professional Development</span>
+                <span class="tag">Communication</span>
+                <span class="tag">Teamwork</span>
+              </div>
+              <button type="button" class="btn btn--sm btn--outline preview-trigger" data-title="Internship Certificate — ISPR Summer Internship Program 2025" data-img="images/ispr certificate.jpg">
+                View Internship Certificate
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section page-section" id="projects">
+      <div class="container">
+        <div class="section__label">03 &mdash; Projects</div>
+        <h2 class="section__title">Things I've Built</h2>
+
+        <!-- Category Filter Bar -->
+        <div class="filter-bar" id="projectFilters" role="tablist" aria-label="Filter projects by category">
+          <button type="button" class="filter-btn is-active" data-filter="all">All (7)</button>
+          <button type="button" class="filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button type="button" class="filter-btn" data-filter="ai">AI &amp; ML</button>
+          <button type="button" class="filter-btn" data-filter="apps">Apps &amp; Desktop</button>
+          <button type="button" class="filter-btn" data-filter="uiux">UI/UX</button>
+        </div>
+
+        <div class="projects__grid">
+
+          <div class="project-card project-card--featured" data-category="fullstack" data-index="01">
+            <div class="project-card__thumb">
+              <img src="project card\lms.png" alt="Campus 95 LMS preview" loading="lazy" />
+            </div>
+            <div class="project-card__top">
+              <span class="project-card__num">01</span>
+              <div class="project-card__links">
+                <a href="https://github.com/arjiaashraf/campus-95-lms" target="_blank" rel="noopener noreferrer" class="project-card__link">GitHub &#8599;</a>
+                <a href="https://lms-web-app-phi.vercel.app/login" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--accent">Live &#8599;</a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Campus 95 — Full-Stack Learning Management System (LMS)</h3>
+            <ul class="project-card__bullets">
+              <li>Multi-role platform for Admin, Instructor, and Student workflows with JWT auth, RBAC, and OTP password reset[cite: 2].</li>
+              <li>Supports course/batch enrollment, timed online exams, attendance tracking, and analytics reporting on Vercel[cite: 2].</li>
+            </ul>
+            <div class="project-card__stack">
+              <span class="tag tag--accent">React</span>
+              <span class="tag tag--accent">TypeScript</span>
+              <span class="tag tag--accent">Node.js</span>
+              <span class="tag tag--accent">Express</span>
+              <span class="tag tag--accent">MySQL</span>
+            </div>
+          </div>
+
+          <div class="project-card project-card--featured" data-category="fullstack" data-index="02">
+            <div class="project-card__thumb">
+              <img src="project card\swift.png" alt="Swift Blockchain preview" loading="lazy" />
+            </div>
+            <div class="project-card__top">
+              <span class="project-card__num">02</span>
+              <div class="project-card__links">
+                <a href="https://github.com/arjiaashraf/swift-blockchain" target="_blank" rel="noopener noreferrer" class="project-card__link">GitHub &#8599;</a>
+                <a href="https://swift-blockchain.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--accent">Live &#8599;</a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Swift Blockchain</h3>
+            <ul class="project-card__bullets">
+              <li>Built a responsive blockchain-based web application using Next.js and React[cite: 2].</li>
+              <li>Integrated Node.js and MongoDB with live deployment on Vercel[cite: 2].</li>
+            </ul>
+            <div class="project-card__stack">
+              <span class="tag tag--accent">Next.js</span>
+              <span class="tag tag--accent">React</span>
+              <span class="tag tag--accent">Node.js</span>
+              <span class="tag tag--accent">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="ai" data-index="03">
+            <div class="project-card__thumb">
+              <img src="C:\Users\PC\Downloads\Portfolio-main\project card\ai interview.png" alt="AI Interview Coach preview" loading="lazy" />
+            </div>
+            <div class="project-card__top">
+              <span class="project-card__num">03</span>
+              <div class="project-card__links">
+                <a href="https://github.com/arjiaashraf/Ai-Interview-Coach" target="_blank" rel="noopener noreferrer" class="project-card__link">GitHub &#8599;</a>
+                <a href="https://ai-interview-coach-hhfc7ftj7qjbsocvmzvtwi.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--accent">Live &#8599;</a>
+              </div>
+            </div>
+            <h3 class="project-card__title">AI Interview Coach</h3>
+            <ul class="project-card__bullets">
+              <li>Simulates technical and behavioral interviews in real time using OpenAI API and speech-to-text[cite: 2].</li>
+              <li>Backed by a normalized SQL database for reliable data integrity[cite: 2].</li>
+            </ul>
+            <div class="project-card__stack">
+              <span class="tag tag--accent">Python</span>
+              <span class="tag tag--accent">OpenAI API</span>
+              <span class="tag tag--accent">Streamlit</span>
+              <span class="tag tag--accent">HuggingFace</span>
+              <span class="tag tag--accent">SQL</span>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="apps" data-index="04">
+            <div class="project-card__thumb">
+              <img src="project card/census managemnt.png" alt="Census Management System preview" loading="lazy" />
+            </div>
+            <div class="project-card__top">
+              <span class="project-card__num">04</span>
+              <div class="project-card__links">
+                <a href="https://github.com/arjiaashraf/Census-Management-System" target="_blank" rel="noopener noreferrer" class="project-card__link">GitHub &#8599;</a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Census Management System</h3>
+            <ul class="project-card__bullets">
+              <li>Desktop application built with C#, WPF, SQL Server, and ADO.NET[cite: 2].</li>
+              <li>Includes secure authentication, household/citizen records, and demographic reporting[cite: 2].</li>
+            </ul>
+            <div class="project-card__stack">
+              <span class="tag tag--accent">C#</span>
+              <span class="tag tag--accent">WPF</span>
+              <span class="tag tag--accent">SQL Server</span>
+              <span class="tag tag--accent">ADO.NET</span>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="apps" data-index="05">
+            <div class="project-card__thumb">
+              <img src="project card/app.png" alt="Women Security App preview" loading="lazy" />
+            </div>
+            <div class="project-card__top">
+              <span class="project-card__num">05</span>
+              <div class="project-card__links">
+                <a href="https://github.com/arjiaashraf/Women-Security-App" target="_blank" rel="noopener noreferrer" class="project-card__link">GitHub &#8599;</a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Women Security App</h3>
+            <ul class="project-card__bullets">
+              <li>Native Android application focused on smooth UI flow and reliable state management[cite: 1].</li>
+              <li>Designed around practical safety workflows for women[cite: 1].</li>
+            </ul>
+            <div class="project-card__stack">
+              <span class="tag tag--accent">Android Studio</span>
+              <span class="tag tag--accent">Java</span>
+              <span class="tag tag--accent">Kotlin</span>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="fullstack" data-index="06">
+            <div class="project-card__thumb">
+              <img src="project card/coffe web.png" alt="Coffee Website preview" loading="lazy" />
+            </div>
+            <div class="project-card__top">
+              <span class="project-card__num">06</span>
+              <div class="project-card__links">
+                <a href="https://github.com/arjiaashraf/coffee-website" target="_blank" rel="noopener noreferrer" class="project-card__link">GitHub &#8599;</a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Coffee Website</h3>
+            <ul class="project-card__bullets">
+              <li>Responsive full-stack web platform with dynamic database integration[cite: 2].</li>
+              <li>Built RESTful APIs and managed data efficiently with Node.js and MongoDB[cite: 2].</li>
+            </ul>
+            <div class="project-card__stack">
+              <span class="tag tag--accent">HTML/CSS/JS</span>
+              <span class="tag tag--accent">Node.js</span>
+              <span class="tag tag--accent">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="uiux" data-index="07">
+            <div class="project-card__thumb">
+              <img src="project card/design.png" alt="UI/UX Redesign Portfolio preview" loading="lazy" />
+            </div>
+            <div class="project-card__top">
+              <span class="project-card__num">07</span>
+              <div class="project-card__links">
+                <a href="https://www.figma.com/design/NLRagaNhp1HE0jV5gWr20T/Untitled?node-id=0-1&p=f&t=oE3dlc9dSWTKKAgd-0" target="_blank" rel="noopener noreferrer" class="project-card__link">WEB DESIGN &#8599;</a>
+                <a href="https://www.figma.com/design/aN8Q2M1Kl5B22mPkxFSqWN/Untitled?t=oE3dlc9dSWTKKAgd-0" target="_blank" rel="noopener noreferrer" class="project-card__link">BAKERY-DESIGN &#8599;</a>
+                <a href="https://www.figma.com/design/CFblmHK6LtoXAOWYz4CSPQ/Untitled?t=oE3dlc9dSWTKKAgd-0" target="_blank" rel="noopener noreferrer" class="project-card__link">BOOKING-DESIGN &#8599;</a>
+                <a href="https://www.figma.com/design/7vJKJrIxVTh1LyMN8qMOl8/HCI?node-id=0-1&p=f&t=G0V5AeLzqLXD1z1v-0" target="_blank" rel="noopener noreferrer" class="project-card__link">REDESIGN-APP &#8599;</a>
+              </div>
+            </div>
+            <h3 class="project-card__title">UI/UX Redesign Portfolio</h3>
+            <ul class="project-card__bullets">
+              <li>Mapped intuitive user flows and structured wireframes across web and mobile concepts[cite: 2].</li>
+              <li>Created interactive high-fidelity prototypes in Figma[cite: 2].</li>
+            </ul>
+            <div class="project-card__stack">
+              <span class="tag tag--accent">Figma</span>
+              <span class="tag tag--accent">UI/UX</span>
+              <span class="tag tag--accent">Prototyping</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section--alt page-section" id="skills">
+      <div class="container">
+        <div class="section__label">04 &mdash; Skills</div>
+        <h2 class="section__title">My Toolkit</h2>
+        <div class="skills__grid">
+
+          <div class="skill-group">
+            <div class="skill-group__icon">{ }</div>
+            <h3>Languages &amp; Frameworks</h3>
+            <div class="skill-group__tags">
+              <span class="tag">Python</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">SQL</span>
+              <span class="tag">C#</span>
+              <span class="tag">WPF</span>
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">Streamlit</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__icon">&#9650;</div>
+            <h3>AI &amp; Data Science</h3>
+            <div class="skill-group__tags">
+              <span class="tag">Prompt Engineering</span>
+              <span class="tag">LLM Integration</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Scikit-Learn</span>
+              <span class="tag">Predictive Modeling</span>
+              <span class="tag">OpenAI API</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__icon">&#9651;</div>
+            <h3>Databases &amp; Tools</h3>
+            <div class="skill-group__tags">
+              <span class="tag">MongoDB</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">ADO.NET</span>
+              <span class="tag">Android Studio</span>
+              <span class="tag">Google Colab</span>
+              <span class="tag">Git / GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__icon">&#9670;</div>
+            <h3>Design, Creative &amp; Soft Skills</h3>
+            <div class="skill-group__tags">
+              <span class="tag">Figma (UI/UX)</span>
+              <span class="tag">Video Editing</span>
+              <span class="tag">Technical Report Writing</span>
+              <span class="tag">Agile Teamwork</span>
+              <span class="tag">Clear Communication</span>
+              <span class="tag">Analytical Problem-Solving</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section page-section" id="certificates">
+      <div class="container">
+        <div class="section__label">05 &mdash; Certificates</div>
+        <h2 class="section__title">Certificates</h2>
+        <div class="certs__grid">
+
+          <button type="button" class="cert-item cert-item--clickable preview-trigger" data-title="Artificial Intelligence (AI) — NAVTTC" data-img="images/ai certificate.jpg">
+            <span class="cert-item__icon">&#10003;</span>
+            <div>
+              <strong>Artificial Intelligence (AI)</strong>
+              <span>NAVTTC &middot; View Certificate</span>
+            </div>
+          </button>
+
+          <button type="button" class="cert-item cert-item--clickable preview-trigger" data-title="Deep Learning Specialization — Coursera" data-img="images/deep learning certificate.jpg">
+            <span class="cert-item__icon">&#10003;</span>
+            <div>
+              <strong>Deep Learning Specialization</strong>
+              <span>Coursera &middot; View Certificate</span>
+            </div>
+          </button>
+
+          <button type="button" class="cert-item cert-item--clickable preview-trigger" data-title="Full Stack Web Development Course — Coursera" data-img="images/full stack certificate.jpg">
+            <span class="cert-item__icon">&#10003;</span>
+            <div>
+              <strong>Full Stack Web Development Course</strong>
+              <span>Coursera &middot; View Certificate</span>
+            </div>
+          </button>
+
+          <button type="button" class="cert-item cert-item--clickable preview-trigger" data-title="UI/UX Design Fundamentals (Figma) — Coursera" data-img="images/figma certificate.jpg">
+            <span class="cert-item__icon">&#10003;</span>
+            <div>
+              <strong>UI/UX Design Fundamentals</strong>
+              <span>Coursera (Figma) &middot; View Certificate</span>
+            </div>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--alt page-section" id="contact">
+      <div class="container">
+        <div class="section__label">06 &mdash; Contact</div>
+        <h2 class="section__title">Let's Connect</h2>
+        <div class="contact__wrap">
+          <div class="contact__left">
+            <form class="contact__form" id="contactForm" action="https://formspree.io/f/mqpqyzay" method="POST">
+              <div class="form__group">
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
+              </div>
+              <div class="form__group">
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
+              </div>
+              <div class="form__group">
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+            </form>
+          </div>
+
+          <div class="contact__right">
+            <p>I'm currently open to internships, collaborations, and interesting projects. Whether you have a question or just want to say hello — my inbox is always open.</p>
+            <div class="contact__links">
+              <div class="contact__email-row">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arjiaashrafjia@gmail.com" target="_blank" rel="noopener noreferrer" class="contact__link">
+                  <span class="contact__link-icon">@</span>
+                  arjiaashrafjia@gmail.com
+                </a>
+                <button type="button" class="copy-email-btn" id="copyEmailBtn" data-email="arjiaashrafjia@gmail.com">Copy</button>
+              </div>
+              <a href="https://www.linkedin.com/in/arjia-ashraf-688043374?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="contact__link">
+                <span class="contact__link-icon">in</span>
+                linkedin.com/in/arjia-ashraf
+              </a>
+              <a href="https://github.com/arjiaashraf" target="_blank" rel="noopener noreferrer" class="contact__link">
+                <span class="contact__link-icon">&lt;&gt;</span>
+                github.com/arjiaashraf
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BOOK PAGE BAR -->
+  <div class="book-pager" id="bookPager">
+    <button type="button" class="book-pager__btn" id="prevPageBtn">&larr; Prev Page</button>
+    <span class="book-pager__info" id="pageIndicator">Page 1 of 7 — Home</span>
+    <button type="button" class="book-pager__btn" id="nextPageBtn">Next Page &rarr;</button>
+  </div>
+
+  <!-- IMAGE PREVIEW MODAL -->
+  <div class="cert-modal" id="certModal" aria-hidden="true">
+    <div class="cert-modal__backdrop" id="certModalBackdrop"></div>
+    <div class="cert-modal__box">
+      <div class="cert-modal__header">
+        <h4 id="certModalTitle">Certificate Preview</h4>
+        <button type="button" class="cert-modal__close" id="certModalClose" aria-label="Close preview">&times;</button>
+      </div>
+      <div class="cert-modal__body">
+        <img id="certModalImg" src="" alt="Certificate Document Preview" />
+        <p class="cert-modal__note" id="certModalNote"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by <strong>Arjia Ashraf</strong> &copy; 2026</p>
+      <p class="footer__sub">NUTECH &middot; Rawalpindi, Pakistan</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
